@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour {
     private void Start() {
         _transform = this.GetComponent<Transform>();
         _rigidbody = this.GetComponent<Rigidbody2D>();
-
-        Debug.Log("PlayerMovement script started");
     }
 
     private void Update() {

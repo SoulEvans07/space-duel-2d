@@ -3,6 +3,7 @@ _Builds/
 Temp/
 Library/
 obj/
+.vscode/
 
 *.csproj
 *.unityproj

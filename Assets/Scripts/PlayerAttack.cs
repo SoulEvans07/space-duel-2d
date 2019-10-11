@@ -4,8 +4,11 @@ public class PlayerAttack : MonoBehaviour {
     private Transform _transform;
     public string SHOOT = "Fire1";
 
-    public GameObject laser;
+    public GameObject laserBullet;
+    public GunMode gunMode = GunMode.SINGLE;
+    public Transform left_gun;
     public Transform middle_gun;
+    public Transform right_gun;
 
     private float timer = 0f;
     public float shootSpeed = 0.35f;
@@ -28,7 +31,21 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void Shoot() {
-        this.SpawnProjectile(middle_gun.transform, laser);
+        switch (gunMode) {
+            case GunMode.SINGLE:
+				SpawnProjectile(middle_gun.transform, laserBullet);
+				break;
+			case GunMode.DOUBLE:
+				SpawnProjectile(left_gun.transform, laserBullet);
+				SpawnProjectile(right_gun.transform, laserBullet);
+				break;
+			case GunMode.TRIPLE:
+				SpawnProjectile(left_gun.transform, laserBullet);
+				SpawnProjectile(middle_gun.transform, laserBullet);
+				SpawnProjectile(right_gun.transform, laserBullet);
+				break;
+        }
+
         timer = 0f;
     }
 

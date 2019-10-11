@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if(shoot && timer >= shootSpeed) {
+        if (shoot && timer >= shootSpeed) {
             Shoot();
         }
     }

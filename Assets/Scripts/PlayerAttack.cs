@@ -4,6 +4,7 @@ public class PlayerAttack : MonoBehaviour {
     private Transform _transform;
     public string SHOOT = "Fire1";
 
+    public Color playerColor;
     public GameObject laserBullet;
     public GunMode gunMode = GunMode.SINGLE;
     public Transform left_gun;
@@ -51,6 +52,8 @@ public class PlayerAttack : MonoBehaviour {
 
     private GameObject SpawnProjectile(Transform gun, GameObject bullet) {
         GameObject projectile = Instantiate(bullet, gun.position, _transform.rotation);
+        ProjectileController projContr = projectile.GetComponent<ProjectileController>();
+        projContr.SetShooter(this);
         projectile.gameObject.layer = this.gameObject.layer;
         return projectile;
     }

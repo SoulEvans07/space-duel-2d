@@ -1,9 +1,10 @@
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
-    private Transform _transform;
     public string SHOOT = "Fire1";
 
+    private Transform _transform;
+    
     public Color playerColor;
     public GameObject laserBullet;
     public GunMode gunMode = GunMode.SINGLE;

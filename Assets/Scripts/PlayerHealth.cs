@@ -2,6 +2,9 @@ using System;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
+    private PlayerAttack _playerAttack;
+    private PlayerMovement _playerMovement;
+
     public int maxHealth = 100;
     public int healthValue;
 
@@ -12,6 +15,9 @@ public class PlayerHealth : MonoBehaviour {
     public bool IsDead => isDead;
 
     private void Awake() {
+        _playerAttack = this.GetComponent<PlayerAttack>();
+        _playerMovement = this.GetComponent<PlayerMovement>();
+
         isDead = false;
         timer = iframes;
         healthValue = maxHealth;
@@ -24,7 +30,6 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     private void HandleHit(GameObject other) {
-        Debug.Log(other);
         string tag = other.tag;
         int dmg = other.GetComponent<ProjectileController>().dmg;
 
@@ -63,5 +68,6 @@ public class PlayerHealth : MonoBehaviour {
     private void Death() {
         isDead = true;
         Debug.Log(this.name + " is dead!");
+        Destroy(this.gameObject);
     }
 }

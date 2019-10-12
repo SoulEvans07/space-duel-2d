@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void Update() {
-        shoot = Input.GetButton(SHOOT);
+        shoot = true; // Input.GetButton(SHOOT);
         timer += Time.deltaTime;
     }
 

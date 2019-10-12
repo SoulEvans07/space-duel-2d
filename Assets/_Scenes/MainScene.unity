@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHOOT: Fire1
-  playerColor: {r: 1, g: 0, b: 0.29291916, a: 0.5019608}
+  playerColor: {r: 1, g: 0, b: 0.29291916, a: 0}
   laserBullet: {fileID: 1465067638981508874, guid: bc04c3f791a304f758b744b06a361eb8,
     type: 3}
   gunMode: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SHOOT: Fire1
-  playerColor: {r: 0, g: 1, b: 0.5803922, a: 0.5019608}
+  playerColor: {r: 0, g: 1, b: 0.5803922, a: 0}
   laserBullet: {fileID: 1465067638981508874, guid: bc04c3f791a304f758b744b06a361eb8,
     type: 3}
   gunMode: 0

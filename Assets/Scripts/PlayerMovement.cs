@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 direction;
     public float maxSpeed;
 
-    private void Start() {
+    private void Awake() {
         _transform = this.GetComponent<Transform>();
         _rigidbody = this.GetComponent<Rigidbody2D>();
     }

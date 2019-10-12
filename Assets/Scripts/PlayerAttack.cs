@@ -15,13 +15,13 @@ public class PlayerAttack : MonoBehaviour {
     public float shootSpeed = 0.35f;
     private bool shoot;
 
-    private void Start() {
+    private void Awake() {
         _transform = this.GetComponent<Transform>();
         timer = shootSpeed;
     }
 
     private void Update() {
-        shoot = true; // Input.GetButton(SHOOT);
+        shoot = Input.GetButton(SHOOT);
         timer += Time.deltaTime;
     }
 

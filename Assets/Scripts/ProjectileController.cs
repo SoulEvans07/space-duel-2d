@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour {
     private Transform _transform;
-    public MeshRenderer _renderer;
-    public float speed = 0.15f;
+    private MeshRenderer _renderer;
     private PlayerAttack player;
+    
+    public float speed = 0.15f;
+    public int dmg = 1;
 
     private void Awake() {
         _transform = this.GetComponent<Transform>();

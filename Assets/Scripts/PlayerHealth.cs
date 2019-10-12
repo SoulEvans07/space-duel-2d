@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour {
     public int maxHealth = 100;
     public int healthValue;
 
-    private float timer = 0f;
+    public float timer = 0f;
     public float iframes = 0.006f;
 
     private bool isDead;
@@ -23,19 +23,33 @@ public class PlayerHealth : MonoBehaviour {
         healthValue = maxHealth;
     }
 
+    private void Update() {
+        timer += Time.deltaTime;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
-        if (timer >= iframes) {
-            HandleHit(other.gameObject);
-        }
+        HandleHit(other.gameObject);
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        HandleHit(other.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        HandleHit(other.gameObject);
+    }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        HandleHit(other.gameObject);
     }
 
     private void HandleHit(GameObject other) {
-        string tag = other.tag;
-        int dmg = other.GetComponent<ProjectileController>().dmg;
+        if (timer < iframes) return;
 
+        string tag = other.tag;
         switch (tag) {
             case "Projectile":
-                TakeDamage(dmg);
+                TakeDamage(other.GetComponent<ProjectileController>().dmg);
                 Destroy(other);
                 break;
             case "Player":

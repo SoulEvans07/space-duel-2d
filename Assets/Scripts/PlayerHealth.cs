@@ -58,8 +58,10 @@ public class PlayerHealth : MonoBehaviour {
                 break;
             // case "Laser": 
             //     break;
-            // case "Asteroid":
-            //     break;
+            case "Asteroid":
+                TakeDamage(other.GetComponent<AsteroidController>().dmg);
+                Destroy(other.gameObject);
+                break;
         }
     }
 

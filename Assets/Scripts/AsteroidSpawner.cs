@@ -7,6 +7,7 @@ public class AsteroidSpawner : MonoBehaviour {
     public float powerupAsteroidProbability = 0.9f;
     public float spawnTime = 1f;
     public GameObject asteroidPrefab;
+    public Transform asteroidContainer;
     public float[] speeds = { 2f, 5f, 5f, 5f, 5f, 7f, 7f };
     public Sprite[] asteroidSprites;
     public SpawnPoint[] spawnPoints;
@@ -28,6 +29,7 @@ public class AsteroidSpawner : MonoBehaviour {
         Sprite asteroidSprite = asteroidSprites[Random.Range(0, asteroidSprites.Length)];
         AsteroidController astrContr = asteroid.GetComponent<AsteroidController>();
         astrContr.SetSprite(asteroidSprite);
-        astrContr.SetVelocity(spawnPoint.startVector, speed);
+        astrContr.SetVelocity(spawnPoint.GetStartVector(), speed);
+        asteroid.transform.parent = asteroidContainer;
     }
 }

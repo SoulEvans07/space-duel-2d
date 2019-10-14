@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
     private PlayerAttack _playerAttack;
     private PlayerMovement _playerMovement;
+
+    public Slider healthSlider;
 
     public int maxHealth = 100;
     public int healthValue;
@@ -21,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
         isDead = false;
         timer = iframes;
         healthValue = maxHealth;
+        healthSlider.value = (float) healthValue / (float) maxHealth;
     }
 
     private void Update() {
@@ -74,7 +78,7 @@ public class PlayerHealth : MonoBehaviour {
             healthValue = 0;
         }
 
-        // update health display
+        healthSlider.value = (float) healthValue / (float) maxHealth;
 
         if (healthValue == 0) {
             Death();

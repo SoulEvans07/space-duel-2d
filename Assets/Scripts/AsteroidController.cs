@@ -2,6 +2,7 @@
 
 public class AsteroidController : MonoBehaviour {
     private Rigidbody2D _rigidbody;
+    private SpriteRenderer _renderer;
 
     public int dmg = 1;
     public Vector2 direction;
@@ -10,6 +11,7 @@ public class AsteroidController : MonoBehaviour {
 
     private void Awake() {
         _rigidbody = this.GetComponent<Rigidbody2D>();
+        _renderer = this.GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate() {
@@ -28,5 +30,14 @@ public class AsteroidController : MonoBehaviour {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+    }
+
+    public void SetSprite(Sprite sprite) {
+        _renderer.sprite = sprite;
+    }
+
+    public void SetVelocity(Vector2 _direction, float _speed) {
+        this.direction = _direction;
+        this.speed = _speed;
     }
 }

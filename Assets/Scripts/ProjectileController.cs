@@ -4,6 +4,7 @@ public class ProjectileController : MonoBehaviour {
     private Transform _transform;
     private MeshRenderer _renderer;
     private PlayerAttack player;
+    private PlayerPowerupHandler handler;
     
     public float speed = 0.15f;
     public int dmg = 1;
@@ -17,8 +18,13 @@ public class ProjectileController : MonoBehaviour {
         _transform.position += speed * _transform.up;
     }
 
-    public void SetShooter(PlayerAttack player) {
-        this.player = player;
-        _renderer.materials[0].SetColor("_TintColor", player.playerColor);
+    public void SetShooter(GameObject player) {
+        this.player = player.GetComponent<PlayerAttack>();
+        this.handler = player.GetComponent<PlayerPowerupHandler>();
+        _renderer.materials[0].SetColor("_TintColor", this.player.playerColor);
+    }
+
+    public PlayerPowerupHandler GetShooter() {
+        return this.handler;
     }
 }

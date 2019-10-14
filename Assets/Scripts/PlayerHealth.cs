@@ -90,4 +90,12 @@ public class PlayerHealth : MonoBehaviour {
         Debug.Log(this.name + " is dead!");
         Destroy(this.gameObject);
     }
+
+    public void Heal(int amount) {
+        healthValue += amount;
+        if (healthValue > maxHealth) {
+            healthValue = maxHealth;
+        }
+        healthSlider.value = (float) healthValue / (float) maxHealth; 
+    }
 }

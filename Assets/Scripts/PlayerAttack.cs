@@ -54,8 +54,12 @@ public class PlayerAttack : MonoBehaviour {
     private GameObject SpawnProjectile(Transform gun, GameObject bullet) {
         GameObject projectile = Instantiate(bullet, gun.position, _transform.rotation);
         ProjectileController projContr = projectile.GetComponent<ProjectileController>();
-        projContr.SetShooter(this);
+        projContr.SetShooter(this.gameObject);
         projectile.gameObject.layer = this.gameObject.layer;
         return projectile;
+    }
+    
+    public void SetGunMode(GunMode mode) {
+		this.gunMode = mode;
     }
 }

@@ -39,11 +39,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3461920994963840312}
+  - component: {fileID: 3461920994963840314}
+  - component: {fileID: 231180696393529170}
   - component: {fileID: 3461920994963840315}
   - component: {fileID: 6498601537217705742}
   - component: {fileID: 3461920994963840317}
-  - component: {fileID: 3461920994963840314}
-  - component: {fileID: 231180696393529170}
+  - component: {fileID: 6283741814186136191}
   m_Layer: 9
   m_Name: PlayerGreen
   m_TagString: Player
@@ -69,58 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3461920994963840315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3461920994963840313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef66d1da57cf4d64bfc21093f159e27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AXIS_X: Horizontal
-  AXIS_Y: Vertical
-  maxSpeed: 3
---- !u!114 &6498601537217705742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3461920994963840313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82cfa3f1fd2864cccb8e3c9eab43e254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  healthValue: 0
-  timer: 0
-  iframes: 0.5
---- !u!114 &3461920994963840317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3461920994963840313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39fb38f14f8fa4e4299c705d23aa21dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SHOOT: Fire1
-  playerColor: {r: 0, g: 1, b: 0.5803922, a: 0}
-  laserBullet: {fileID: 1465067638981508874, guid: bc04c3f791a304f758b744b06a361eb8,
-    type: 3}
-  gunMode: 0
-  left_gun: {fileID: 3461920996379802670}
-  middle_gun: {fileID: 3461920996027517250}
-  right_gun: {fileID: 3461920994935530721}
-  shootSpeed: 0.35
 --- !u!50 &3461920994963840314
 Rigidbody2D:
   serializedVersion: 4
@@ -175,6 +124,75 @@ PolygonCollider2D:
       - {x: 0.0011817813, y: -0.32341397}
       - {x: 0.2506751, y: -0.07634586}
       - {x: 0.4700532, y: -0.28265762}
+--- !u!114 &3461920994963840315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461920994963840313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef66d1da57cf4d64bfc21093f159e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AXIS_X: Horizontal
+  AXIS_Y: Vertical
+  maxSpeed: 3
+--- !u!114 &6498601537217705742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461920994963840313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cfa3f1fd2864cccb8e3c9eab43e254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  maxHealth: 10
+  healthValue: 0
+  timer: 0
+  iframes: 0.5
+--- !u!114 &3461920994963840317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461920994963840313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fb38f14f8fa4e4299c705d23aa21dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SHOOT: Fire1
+  playerColor: {r: 0, g: 1, b: 0.5803922, a: 0}
+  laserBullet: {fileID: 1465067638981508874, guid: bc04c3f791a304f758b744b06a361eb8,
+    type: 3}
+  gunMode: 0
+  left_gun: {fileID: 3461920996379802670}
+  middle_gun: {fileID: 3461920996027517250}
+  right_gun: {fileID: 3461920994935530721}
+  shootSpeed: 0.35
+--- !u!114 &6283741814186136191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461920994963840313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178863d4551b44745908f26aacd3c754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 6498601537217705742}
+  playerAttack: {fileID: 3461920994963840317}
+  playerMovement: {fileID: 3461920994963840315}
+  powerupSlider: {fileID: 0}
 --- !u!1 &3461920995262099919
 GameObject:
   m_ObjectHideFlags: 0

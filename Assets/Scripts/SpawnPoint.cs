@@ -9,6 +9,7 @@ public class SpawnPoint : MonoBehaviour {
     public Vector2 startVector;
     public float xOffset = 0f;
     public float yOffset = 0.2f;
+    public float scaleOffset = 0.3f;
 
     private void Awake() {
         _transform = this.GetComponent<Transform>();
@@ -27,5 +28,10 @@ public class SpawnPoint : MonoBehaviour {
         );
         nextVector.Normalize();
         return nextVector;
+    }
+
+    public Vector3 GetScale() {
+        float scale = 1 + Random.Range(-scaleOffset, scaleOffset);
+        return new Vector3(scale, scale, 1);
     }
 }

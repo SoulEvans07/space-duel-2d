@@ -30,6 +30,7 @@ public class AsteroidSpawner : MonoBehaviour {
         AsteroidController astrContr = asteroid.GetComponent<AsteroidController>();
         astrContr.SetSprite(asteroidSprite);
         astrContr.SetVelocity(spawnPoint.GetStartVector(), speed);
+        asteroid.transform.localScale = spawnPoint.GetScale();
         asteroid.transform.parent = asteroidContainer;
     }
 }

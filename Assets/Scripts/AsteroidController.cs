@@ -12,17 +12,7 @@ public class AsteroidController : MonoBehaviour {
     private void Awake() {
         _rigidbody = this.GetComponent<Rigidbody2D>();
         _renderer = this.GetComponent<SpriteRenderer>();
-    }
-
-    private void FixedUpdate() {
-        Move(direction, speed);
-    }
-
-    private void Move(Vector2 direction, float speed) {
-        Vector2 nextPos = this._rigidbody.position +
-            direction * speed * Time.fixedDeltaTime;
-
-        this._rigidbody.MovePosition(nextPos);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -39,5 +29,6 @@ public class AsteroidController : MonoBehaviour {
     public void SetVelocity(Vector2 _direction, float _speed) {
         this.direction = _direction;
         this.speed = _speed;
+        this._rigidbody.velocity = _direction * _speed;
     }
 }

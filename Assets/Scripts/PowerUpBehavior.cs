@@ -1,13 +1,17 @@
 using UnityEngine;
 
 public class PowerUpBehavior : MonoBehaviour {
-    private Transform _transform;
+    private Rigidbody2D _rigidbody;
     private PlayerPowerupHandler handler;
     [SerializeField]
     private PowerUp powerUp;
 
     public Vector2 direction;
     public float speed;
+
+    private void Awake() {
+        _rigidbody = this.GetComponent<Rigidbody2D>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         bool isProjectile = other.CompareTag("Projectile");
@@ -35,5 +39,11 @@ public class PowerUpBehavior : MonoBehaviour {
 
     public void ApplyPowerUp() {
         handler.ActivatePowerUp(powerUp);
+    }
+
+    public void SetVelocity(Vector2 _direction, float _speed) {
+        this.direction = _direction;
+        this.speed = _speed;
+        this._rigidbody.velocity = _direction * _speed;
     }
 }

@@ -12,7 +12,6 @@ public class AsteroidController : MonoBehaviour {
     private void Awake() {
         _rigidbody = this.GetComponent<Rigidbody2D>();
         _renderer = this.GetComponent<SpriteRenderer>();
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

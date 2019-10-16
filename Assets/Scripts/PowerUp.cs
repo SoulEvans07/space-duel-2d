@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class PowerUp {
 	[SerializeField] public string name;
 	[SerializeField] public float duration;
+	[SerializeField] public bool overwrite = true;
 	[SerializeField] public PowerUpEvent applyAction;
 	[SerializeField] public PowerUpEvent removeAction;
 

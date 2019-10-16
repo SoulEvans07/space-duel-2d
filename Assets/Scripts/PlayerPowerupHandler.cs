@@ -34,12 +34,14 @@ public class PlayerPowerupHandler : MonoBehaviour {
     }
 
     public void ActivatePowerUp(PowerUp powerUp) {
-        activePowerup?.Remove(this);
+        if (powerUp.overwrite) {
+            activePowerup?.Remove(this);
 
-        activePowerup = powerUp;
-        timer = powerUp.duration;
-        duration = powerUp.duration;
-        powerupSlider.value = 1f;
+            activePowerup = powerUp;
+            timer = powerUp.duration;
+            duration = powerUp.duration;
+            powerupSlider.value = 1f;
+        }
         
         powerUp.Apply(this);
     }

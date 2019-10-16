@@ -75,7 +75,6 @@ public class PlayerHealth : MonoBehaviour {
     private void TakeDamage(float dmg) {
         healthValue -= dmg;
         // play hit anim
-        Debug.Log("[" + this.name + "] " + healthValue + "/" + maxHealth);
 
         if (healthValue < 0) {
             healthValue = 0;

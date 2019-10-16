@@ -12,6 +12,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealPU Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 936651016300565610, guid: 0993ec898bb5e4fc59e8e994a3ec691e,
+        type: 3}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealApplyAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.name
+      value: Heal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.duration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
+        type: 3}
+      propertyPath: powerUp.overwrite
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 784232430551574922, guid: 61dc77bc842654f03b63bbcfe0211ab6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,37 +116,6 @@ PrefabInstance:
     - target: {fileID: 784232430551574921, guid: 61dc77bc842654f03b63bbcfe0211ab6,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 936651016300565610, guid: 0993ec898bb5e4fc59e8e994a3ec691e,
-        type: 3}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HealApplyAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.applyAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.name
-      value: Heal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832130211773504264, guid: 61dc77bc842654f03b63bbcfe0211ab6,
-        type: 3}
-      propertyPath: powerUp.duration
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

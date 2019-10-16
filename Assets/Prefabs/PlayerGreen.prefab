@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef66d1da57cf4d64bfc21093f159e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AXIS_X: Horizontal
-  AXIS_Y: Vertical
+  AXIS_X: PlayerOneHorizontal
+  AXIS_Y: PlayerOneVertical
   maxSpeed: 3
 --- !u!114 &6498601537217705742
 MonoBehaviour:
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fb38f14f8fa4e4299c705d23aa21dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SHOOT: Fire1
+  SHOOT: PlayerOneFire
   playerColor: {r: 0, g: 1, b: 0.5803922, a: 0}
   laserBullet: {fileID: 1465067638981508874, guid: bc04c3f791a304f758b744b06a361eb8,
     type: 3}

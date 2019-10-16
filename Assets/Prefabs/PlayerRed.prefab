@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3461920994963840315, guid: 7b6aae52053fc46b38248c42d21f46f2,
+        type: 3}
+      propertyPath: AXIS_X
+      value: PlayerTwoHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461920994963840315, guid: 7b6aae52053fc46b38248c42d21f46f2,
+        type: 3}
+      propertyPath: AXIS_Y
+      value: PlayerTwoVertical
+      objectReference: {fileID: 0}
     - target: {fileID: 3461920994963840317, guid: 7b6aae52053fc46b38248c42d21f46f2,
         type: 3}
       propertyPath: playerColor.r
@@ -102,6 +112,11 @@ PrefabInstance:
       propertyPath: right_gun
       value: 
       objectReference: {fileID: 8321581969238698429}
+    - target: {fileID: 3461920994963840317, guid: 7b6aae52053fc46b38248c42d21f46f2,
+        type: 3}
+      propertyPath: SHOOT
+      value: PlayerTwoFire
+      objectReference: {fileID: 0}
     - target: {fileID: 3461920995262099921, guid: 7b6aae52053fc46b38248c42d21f46f2,
         type: 3}
       propertyPath: m_Sprite

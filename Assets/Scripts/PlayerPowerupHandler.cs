@@ -53,4 +53,8 @@ public class PlayerPowerupHandler : MonoBehaviour {
     public void SetGunMode(GunMode mode) {
         playerAttack.SetGunMode(mode);
     }
+
+    public void SetShotSpeed(float speed) {
+        playerAttack.SetShotSpeed(speed);
+    }
 }

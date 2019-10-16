@@ -20,4 +20,12 @@ public class PowerUpActions : MonoBehaviour {
 	public void TripleGunRemoveAction(PlayerPowerupHandler controller) {
 		controller.SetGunMode(GunMode.SINGLE);
 	}
+
+	public void DoubleShotSpeedApplyAction(PlayerPowerupHandler controller) {
+		controller.SetShotSpeed(PlayerAttack.defaultSpeed / 2);
+	}
+
+	public void DoubleShotSpeedRemoveAction(PlayerPowerupHandler controller) {
+		controller.SetShotSpeed(PlayerAttack.defaultSpeed);
+	}
 }

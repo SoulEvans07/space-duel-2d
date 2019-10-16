@@ -13,12 +13,14 @@ public class PlayerAttack : MonoBehaviour {
     public Transform right_gun;
 
     private float timer = 0f;
-    public float shootSpeed = 0.35f;
+    [SerializeField] 
+    public static float defaultSpeed = 0.35f;
+    public float shotSpeed = 0.35f;
     private bool shoot;
 
     private void Awake() {
         _transform = this.GetComponent<Transform>();
-        timer = shootSpeed;
+        timer = shotSpeed;
     }
 
     private void Update() {
@@ -27,7 +29,7 @@ public class PlayerAttack : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (shoot && timer >= shootSpeed) {
+        if (shoot && timer >= shotSpeed) {
             Shoot();
         }
     }
@@ -61,5 +63,9 @@ public class PlayerAttack : MonoBehaviour {
     
     public void SetGunMode(GunMode mode) {
 		this.gunMode = mode;
+    }
+
+    public void SetShotSpeed(float speed) {
+        this.shotSpeed = speed;
     }
 }

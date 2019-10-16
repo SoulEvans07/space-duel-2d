@@ -509,6 +509,9 @@ MonoBehaviour:
     spawn_weight: 2
   - powerUpPrefab: {fileID: 205717269971499019, guid: e316f23484a7f4f67b34c63f99104158,
       type: 3}
+    spawn_weight: 2
+  - powerUpPrefab: {fileID: 8495522696364634007, guid: 511ccdea5125d4ee8a216fa0f1a785eb,
+      type: 3}
     spawn_weight: 3
   spawnPoints:
   - {fileID: 1256385504}

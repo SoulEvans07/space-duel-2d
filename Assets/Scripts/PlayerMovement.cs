@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         direction.x = Input.GetAxisRaw(AXIS_X);
         direction.y = Input.GetAxisRaw(AXIS_Y);
+        direction.Normalize();
     }
 
     private void FixedUpdate() {

@@ -2701,7 +2701,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -8.5
     y: -6
-    width: 17
+    width: 8.5
     height: 6
   timer: 0
   startDelay: 1

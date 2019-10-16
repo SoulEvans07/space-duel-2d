@@ -27,7 +27,14 @@ public class PlayerMovement : MonoBehaviour {
     private void Move(Vector2 direction, float speed) {
         Vector2 nextPos = this._rigidbody.position +
             direction * speed * Time.fixedDeltaTime;
-        // TODO: boundaries validation
+        
+        if (nextPos.x < GameAreaManager.MIN_WIDTH || nextPos.x > GameAreaManager.MAX_WIDTH) {
+			nextPos.x = _rigidbody.position.x;
+        }
+		if (nextPos.y < GameAreaManager.BOTTOM || nextPos.y > GameAreaManager.TOP) {
+			nextPos.y = _rigidbody.position.y;
+        }
+
         this._rigidbody.MovePosition(nextPos);
     }
 }

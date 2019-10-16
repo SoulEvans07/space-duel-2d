@@ -5,6 +5,8 @@ public class GameAreaManager : MonoBehaviour {
     public static float MIN_HEIGHT;
     public static float MAX_WIDTH;
     public static float MAX_HEIGHT;
+    public static float BOTTOM;
+    public static float TOP;
 
     public Transform player_one;
     public Transform player_two;
@@ -39,6 +41,8 @@ public class GameAreaManager : MonoBehaviour {
         MIN_HEIGHT = gameArea.y;
         MAX_WIDTH = gameArea.width;
         MAX_HEIGHT = gameArea.height;
+        BOTTOM = gameArea.y + 1f;
+        TOP = gameArea.height - 1f;
     }
 
     private void Update() {

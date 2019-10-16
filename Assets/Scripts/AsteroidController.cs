@@ -4,7 +4,7 @@ public class AsteroidController : MonoBehaviour {
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _renderer;
 
-    public int dmg = 1;
+    public float dmg = 1f;
     public Vector2 direction;
     public float speed = 1f;
 

@@ -8,11 +8,11 @@ public class PlayerHealth : MonoBehaviour {
 
     public Slider healthSlider;
 
-    public int maxHealth = 100;
-    public int healthValue;
+    public float maxHealth = 100f;
+    public float healthValue;
 
     public float timer = 0f;
-    public float iframes = 0.006f;
+    public float iframes = 4f;
 
     private bool isDead;
     public bool IsDead => isDead;
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour {
         isDead = false;
         timer = iframes;
         healthValue = maxHealth;
-        healthSlider.value = (float) healthValue / (float) maxHealth;
+        healthSlider.value = healthValue / maxHealth;
     }
 
     private void Update() {
@@ -66,10 +66,13 @@ public class PlayerHealth : MonoBehaviour {
                 TakeDamage(other.GetComponent<AsteroidController>().dmg);
                 Destroy(other.gameObject);
                 break;
+            case "DangerZone":
+                TakeDamage(other.GetComponent<DangerZone>().dmg);
+                break;
         }
     }
 
-    private void TakeDamage(int dmg) {
+    private void TakeDamage(float dmg) {
         healthValue -= dmg;
         // play hit anim
         Debug.Log("[" + this.name + "] " + healthValue + "/" + maxHealth);
@@ -85,7 +88,7 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    private void Death() {
+    public void Death() {
         isDead = true;
         Debug.Log(this.name + " is dead!");
         Destroy(this.gameObject);

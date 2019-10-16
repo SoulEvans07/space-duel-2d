@@ -7,7 +7,7 @@ public class ProjectileController : MonoBehaviour {
     private PlayerPowerupHandler handler;
     
     public float speed = 0.15f;
-    public int dmg = 1;
+    public float dmg = 1f;
 
     private void Awake() {
         _transform = this.GetComponent<Transform>();

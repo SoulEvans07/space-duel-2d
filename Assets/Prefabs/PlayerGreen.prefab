@@ -152,10 +152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
-  maxHealth: 10
+  maxHealth: 100
   healthValue: 0
   timer: 0
-  iframes: 0.5
+  iframes: 4
 --- !u!114 &3461920994963840317
 MonoBehaviour:
   m_ObjectHideFlags: 0

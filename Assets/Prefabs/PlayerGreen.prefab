@@ -155,7 +155,8 @@ MonoBehaviour:
   maxHealth: 100
   healthValue: 0
   timer: 0
-  iframes: 4
+  iframes: 0.025
+  bodyDmg: 0.5
 --- !u!114 &3461920994963840317
 MonoBehaviour:
   m_ObjectHideFlags: 0

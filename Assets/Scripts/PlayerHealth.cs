@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public float timer = 0f;
     public float iframes = 4f;
+    public float bodyDmg = 1f;
 
     private bool isDead;
     public bool IsDead => isDead;
@@ -57,7 +58,7 @@ public class PlayerHealth : MonoBehaviour {
                 Destroy(other);
                 break;
             case "Player":
-                TakeDamage((int) Math.Floor(maxHealth / 4f));
+                TakeDamage(bodyDmg);
                 timer = 0f;
                 break;
             // case "Laser": 
@@ -68,6 +69,7 @@ public class PlayerHealth : MonoBehaviour {
                 break;
             case "DangerZone":
                 TakeDamage(other.GetComponent<DangerZone>().dmg);
+                timer = 0f;
                 break;
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PowerUpActions : MonoBehaviour {
 	public void HealApplyAction(PlayerPowerupHandler controller) {
-		controller.Heal(1);
+		controller.Heal(20);
 	}
 
 	public void DoubleGunApplyAction(PlayerPowerupHandler controller) {

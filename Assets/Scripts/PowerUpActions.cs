@@ -28,4 +28,12 @@ public class PowerUpActions : MonoBehaviour {
 	public void DoubleShotSpeedRemoveAction(PlayerPowerupHandler controller) {
 		controller.SetShotSpeed(PlayerAttack.defaultSpeed);
 	}
+
+	public void MovementSpeedUpApplyAction(PlayerPowerupHandler controller) {
+		controller.SetMovementSpeed(PlayerMovement.defaultSpeed * 1.5f);
+	}
+
+	public void MovementSpeedUpRemoveAction(PlayerPowerupHandler controller) {
+		controller.SetMovementSpeed(PlayerMovement.defaultSpeed);
+	}
 }

@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb0b01090a1d4587bbaad44db41abc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupProbability: 0.502
+  powerupProbability: 0.4
   powerupAsteroidProbability: 0.9
   spawnTime: 1
   asteroidPrefab: {fileID: 3898298941148175685, guid: f8b6d4701181c4f53b25ba2cd6b51473,
@@ -515,16 +515,19 @@ MonoBehaviour:
   powerUps:
   - powerUpPrefab: {fileID: 6586690090759053707, guid: 3833dee27a1514b77ab4b189fcf62fe2,
       type: 3}
-    spawn_weight: 3
+    spawn_weight: 4
   - powerUpPrefab: {fileID: 3424929010152231121, guid: d54fce27ac8a74b0197e5e06e94f0781,
       type: 3}
-    spawn_weight: 2
+    spawn_weight: 1
   - powerUpPrefab: {fileID: 205717269971499019, guid: e316f23484a7f4f67b34c63f99104158,
       type: 3}
     spawn_weight: 2
   - powerUpPrefab: {fileID: 8495522696364634007, guid: 511ccdea5125d4ee8a216fa0f1a785eb,
       type: 3}
-    spawn_weight: 3
+    spawn_weight: 2
+  - powerUpPrefab: {fileID: 1648731895711725947, guid: 24503727654ed44be959033132056541,
+      type: 3}
+    spawn_weight: 2
   spawnPoints:
   - {fileID: 1256385504}
   - {fileID: 552349452}

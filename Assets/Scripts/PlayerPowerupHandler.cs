@@ -57,4 +57,8 @@ public class PlayerPowerupHandler : MonoBehaviour {
     public void SetShotSpeed(float speed) {
         playerAttack.SetShotSpeed(speed);
     }
+
+    public void SetMovementSpeed(float speed) {
+        playerMovement.SetMovementSpeed(speed);
+    }
 }

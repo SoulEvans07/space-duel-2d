@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D _rigidbody;
 
     private Vector2 direction;
+    [SerializeField] 
+    public static float defaultSpeed = 3f;
     public float maxSpeed;
 
     private void Awake() {
@@ -37,5 +39,9 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         this._rigidbody.MovePosition(nextPos);
+    }
+
+    public void SetMovementSpeed(float speed) {
+        maxSpeed = speed;
     }
 }

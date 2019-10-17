@@ -19,28 +19,30 @@ public class GameOverManager : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (player_one.IsDead) {
-            winText.text = "Red won!";
-        }
-
-        if (player_two.IsDead) {
-            winText.text = "Green won!";
-        }
-
-        if (player_one.IsDead && player_two.IsDead) {
-            if (player_one.healthValue > player_two.healthValue) {
-                winText.text = "Green Won!";
-            } else if (player_two.healthValue > player_one.healthValue) {
-                winText.text = "Red Won!";
-            } else {
-                winText.text = "Game Over";
+        if (!GameOverManager.gameOver) {
+            if (player_one.IsDead) {
+                winText.text = "Red won!";
             }
 
-            GameOver();
-        }
+            if (player_two.IsDead) {
+                winText.text = "Green won!";
+            }
 
-        if (player_one.IsDead || player_two.IsDead) {
-            GameOver();
+            if (player_one.IsDead && player_two.IsDead) {
+                if (player_one.healthValue > player_two.healthValue) {
+                    winText.text = "Green Won!";
+                } else if (player_two.healthValue > player_one.healthValue) {
+                    winText.text = "Red Won!";
+                } else {
+                    winText.text = "Game Over";
+                }
+
+                GameOver();
+            }
+
+            if (player_one.IsDead || player_two.IsDead) {
+                GameOver();
+            }
         }
     }
 

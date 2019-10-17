@@ -54,11 +54,7 @@ public class GameAreaManager : MonoBehaviour {
     }
 
     private void Shrink(float deltaTime) {
-        if (gameArea.height < 0.8f) {
-            Debug.Log("!!!! GAME OVER !!!!");
-            //player_one.gameObject.GetComponent<PlayerHealth>().Death();
-            //player_two.gameObject.GetComponent<PlayerHealth>().Death();
-        } else {
+        if (gameArea.height > 0) {
             gameArea.y += barrierSpeed * Time.deltaTime / 2;
             gameArea.height -= barrierSpeed * Time.deltaTime / 2;
 
